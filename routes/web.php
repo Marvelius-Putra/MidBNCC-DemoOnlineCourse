@@ -22,5 +22,5 @@ Route::post('/register', [registerController::class, 'register']);
 Route::get('/login',[loginController::class, 'loginPage']);
 Route::post('/login',[loginController::class, 'login']);
 
-// nyoba git push
+// nyoba git push lagi
 
