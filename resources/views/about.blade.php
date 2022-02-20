@@ -43,39 +43,7 @@
       </nav>
     {{-- end navbar --}}
 
-    @extends('master')
-    @section('title', 'Popular Courses')
-    @section('content')
 
-        <div class="row m-2 d-flex justify-content-center">
-
-            {{-- courses card start --}}
-            @foreach($course as $m)
-            <div class="col col-sm-3">
-                <div class="card bg-light mb-3 border border-warning">
-                    <div class="card-body">
-                        <div>
-                            <div class="m-3">
-                                <h4 class="card-title text-center">{{$m->title}}</h4>
-                                <p class="card-subtitle text-center">{{$m->views}} Learners</p>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <a class="btn btn-outline-primary mr-3" href="#">Details</a>
-                            <a class="btn btn-outline-danger mr-3" href="/enroll">Enroll</a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-            {{-- courses card end --}}
-        </div>
-        <div class="m-5 d-flex justify-content-center">
-            {{-- {{$course->links()}} --}}
-        </div>
-    @endsection
-    <a href="/register">register</a>
-    <a href="/login">login</a>
+      ABOUT
   </body>
 </html>

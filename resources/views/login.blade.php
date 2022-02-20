@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="{{ asset('css/register.css') }}">
 </head>
 <body>
@@ -19,22 +19,22 @@
                     <h2 class="text-uppercase text-center mb-5">Login</h2>
 
                     @auth
-
+                    {{-- form template start --}}
                     <form method="post" action="/login">
                         @csrf
+
                       <div class="form-outline mb-4">
-                        <input  name = "username" type="text" id="form3Example1cg" class="form-control form-control-lg " placeholder="username" value={{Cookie::get('remembercookie')!==null ? Cookie::get('remembercookie'):''}} />
+                        <input id = "username"name = "username" type="text" id="form3Example1cg" class="form-control form-control-lg" placeholder="Username" value={{Cookie::get('remembercookie') !== null ? Cookie::get('remembercookie') :''}}>
                         <label class="form-label" for="form3Example1cg"></label>
                       </div>
 
                       <div class="form-outline mb-4">
-                        <input  name = "password" type="password" id="form3Example1cg" class="form-control form-control-lg " placeholder="password" />
-                        <label class="form-label" for="form3Example1cg"></label>
+                        <input id = "password" name = "password" type="password" id="form3Example3cg" class="form-control form-control-lg" placeholder="Password" />
+                        <label class="form-label" for="form3Example3cg"></label>
                       </div>
-
                       <div class="form-outline mb-4">
-                        <input  name = "remember" type="checkbox" value = "remember" id="remember" class="form-control form-control-lg " checked={{Cookie::get('remembercookie')!==null}}/>remember me <br>
-                        <label class="form-label" for="form3Example1cg"></label>
+                        <input id = "password" name = "remember-me" type="checkbox" id="form3Example3cg" class="form-control form-control-lg" placeholder="Password" checked={{Cookie::get('remembercookie')!== null}} /> remember me
+                        <label class="form-label" for="form3Example3cg"></label>
                       </div>
 
 
@@ -45,15 +45,10 @@
                         <i  class="text-danger text-center mt-3">{{$error}}</i><br>
                         @endforeach
                         @endif
-                        @endif
                     </div>
-
-
-
-
-
-                      <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!" class="fw-bold text-body"><u>Login here</u></a></p>
                     </form>
+                    {{-- form template end --}}
+
                   </div>
                 </div>
               </div>
@@ -62,4 +57,5 @@
         </div>
       </section>
 </body>
+@endif
 </html>

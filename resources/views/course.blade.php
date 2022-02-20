@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Home</title>
+    <title>Courses</title>
   </head>
   <body>
 
@@ -43,39 +43,43 @@
       </nav>
     {{-- end navbar --}}
 
-    @extends('master')
-    @section('title', 'Popular Courses')
-    @section('content')
+    {{-- title courses card start --}}
+@extends('master')
+@section('title', 'Courses')
+@section('content')
+{{-- searching start --}}
+    <div class="d-flex justify-content-center mt-3">
+        <form class="form-inline" action="/search" method="get">
+            <input name="keyword" class="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search" />
+            <button class="btn btn-outline-dark">Search</button>
+        </form>
+        {{-- searching end --}}
+    </div>
+    <div class="row m-2 d-flex justify-content-center">
+        {{-- courses card start --}}
 
-        <div class="row m-2 d-flex justify-content-center">
-
-            {{-- courses card start --}}
-            @foreach($course as $m)
-            <div class="col col-sm-3">
-                <div class="card bg-light mb-3 border border-warning">
-                    <div class="card-body">
-                        <div>
-                            <div class="m-3">
-                                <h4 class="card-title text-center">{{$m->title}}</h4>
-                                <p class="card-subtitle text-center">{{$m->views}} Learners</p>
-                            </div>
+        @foreach($course as $m)
+        <div class="col col-sm-3">
+            <div class="card bg-light mb-3 border border-warning">
+                <div class="card-body">
+                    <div>
+                        <div class="m-3">
+                            <h4 class="card-title text-center">{{$m->title}}</h4>
+                            <p class="card-subtitle text-center">{{$m->views}} Learners</p>
                         </div>
-                        <div class="d-flex justify-content-center">
-                            <a class="btn btn-outline-primary mr-3" href="#">Details</a>
-                            <a class="btn btn-outline-danger mr-3" href="/enroll">Enroll</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a class="btn btn-outline-primary mr-3" href="#">Details</a>
+                        <a class="btn btn-outline-danger mr-3" href="#">Enroll</a>
 
-                        </div>
                     </div>
                 </div>
             </div>
-            @endforeach
-            {{-- courses card end --}}
         </div>
-        <div class="m-5 d-flex justify-content-center">
-            {{-- {{$course->links()}} --}}
-        </div>
-    @endsection
-    <a href="/register">register</a>
-    <a href="/login">login</a>
-  </body>
-</html>
+        @endforeach
+        {{-- courses card end --}}
+    </div>
+    <div class="m-5 d-flex justify-content-center">
+        {{-- {{$course->links()}} --}}
+    </div>
+@endsection

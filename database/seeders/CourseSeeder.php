@@ -28,13 +28,18 @@ class CourseSeeder extends Seeder
             ],
             [
                 'title'=>'Algorithm',
-                'views'=>275,
+                'views'=>300,
                 'description'=>'ini Algorithm'
             ],
             [
                 'title'=>'Math Discrete',
                 'views'=>121,
                 'description'=>'ini Math Discrete'
+            ],
+            [
+                'title'=>'Math Linear',
+                'views'=>165,
+                'description'=>'ini Math Linear'
             ],
             [
                 'title'=>'Web Design',
@@ -45,6 +50,31 @@ class CourseSeeder extends Seeder
                 'title'=>'Java GUI',
                 'views'=>248,
                 'description'=>'ini Java GUI'
+            ],
+            [
+                'title'=>'Database',
+                'views'=>325,
+                'description'=>'ini Database'
+            ],
+            [
+                'title'=>'Laravel',
+                'views'=>415,
+                'description'=>'ini Laravel'
+            ],
+            [
+                'title'=>'Operating System',
+                'views'=>225,
+                'description'=>'ini Operating System'
+            ],
+            [
+                'title'=>'Unity',
+                'views'=>586,
+                'description'=>'ini Unity'
+            ],
+            [
+                'title'=>'Python',
+                'views'=>320,
+                'description'=>'ini Python'
             ],
         ];
 

@@ -30,7 +30,7 @@ class loginController extends Controller
         }
         if(Auth::attempt(['username' => $request->username, 'password' => $request->password], true)){
             Session::put('usersession',['username' => $request->username, 'password' => $request->password]);
-            return redirect('/');
+            return redirect('/home');
         }
         return back() -> withErrors('Login credentials are invalid');
     }
