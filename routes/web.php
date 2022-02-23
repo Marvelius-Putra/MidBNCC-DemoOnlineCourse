@@ -7,7 +7,6 @@ use App\Http\Controllers\homeController;
 use App\Http\Controllers\aboutController;
 use App\Http\Controllers\userController;
 use App\Http\Controllers\enrollController;
-
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,6 +39,5 @@ Route::get('/search', [courseController::class, 'search']);
 
 Route::get('/enroll', [enrollController::class, 'enroll']);
 
-// ini route
-
-
+Route::get('/detail/{id}', [homeController::class, 'showDetail']);
+Route::get('/detail/{id}', [courseController::class, 'showDetail']);

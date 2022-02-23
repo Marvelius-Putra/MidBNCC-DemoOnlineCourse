@@ -6,10 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register</title>
     <link rel="stylesheet" href="{{ asset('css/register.css') }}">
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
 </head>
 <body>
 
-    <section class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+    <section class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp'); border: 10px; border-radius: 10px; margin: 100px; justify-content: center; align-content: center; position: flex;">
         <div class="mask d-flex align-items-center h-100 gradient-custom-3">
           <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
@@ -58,13 +64,13 @@
                       </div>
 
                       <div class="form-outline mb-4">
-                        <input id="age" name = "age" type="text" id="form3Example3cg" class="form-control form-control-lg" placeholder="age" />
+                        <input id="age" name = "age" type="text" id="form3Example3cg" class="form-control form-control-lg" placeholder="Age" />
                         <label class="form-label" for="form3Example3cg"></label>
                       </div>
 
                       <div class = "form-group">
                           <label for="started_at">
-                              birthdate
+                              Birthdate
                           </label>
                           <input name = "birthdate" type="date" id = "started_at" class="form-control form-control" value = "{{ old('started_at')}}">
                       </div>

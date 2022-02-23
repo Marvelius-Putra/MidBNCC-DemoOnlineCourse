@@ -28,4 +28,10 @@ class courseController extends Controller
        $course = course::where('title', 'LIKE', "%$keyword%")->paginate(3)->appends(array('keyword' => $keyword));
        return view('course', compact('course'));
    }
+
+   public function showDetail($id)
+    {
+        $course = course::find($id);
+        return view('detail', compact('course'));
+    }
 }

@@ -6,10 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
     <link rel="stylesheet" href="{{ asset('css/register.css') }}">
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
 </head>
 <body>
-
-    <section class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+    <section class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp'); border: 10px; border-radius: 10px; margin: 100px; justify-content: center; align-content: center; position: flex;">
         <div class="mask d-flex align-items-center h-100 gradient-custom-3">
           <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
@@ -36,7 +41,6 @@
                         <input id = "password" name = "remember-me" type="checkbox" id="form3Example3cg" class="form-control form-control-lg" placeholder="Password" checked={{Cookie::get('remembercookie')!== null}} /> remember me
                         <label class="form-label" for="form3Example3cg"></label>
                       </div>
-
 
                       <div class="d-flex flex-column justify-content-center">
                         <button type="submit" class="btn btn-outline-primary">Login</button><br>

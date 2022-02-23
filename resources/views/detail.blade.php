@@ -8,7 +8,14 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Courses</title>
+    <title>Home</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
   </head>
   <body>
 
@@ -16,7 +23,7 @@
     {{-- navbar --}}
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#">LnT</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -43,43 +50,13 @@
       </nav>
     {{-- end navbar --}}
 
-    {{-- title courses card start --}}
 @extends('master')
-@section('title', 'Courses')
+@section('title', 'Detail Course')
 @section('content')
-{{-- searching start --}}
-    <div class="d-flex justify-content-center mt-3">
-        <form class="form-inline" action="/search" method="get">
-            <input name="keyword" class="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search" />
-            <button class="btn btn-outline-dark">Search</button>
-        </form>
-        {{-- searching end --}}
-    </div>
-    <div class="row m-2 d-flex justify-content-center">
-        {{-- courses card start --}}
+    <h2> {{ $course->title }} </h2>
+    <p> {{ $course->description }} </p>
 
-        @foreach($course as $m)
-        <div class="col col-sm-3">
-            <div class="card bg-light mb-3 border border-warning">
-                <div class="card-body">
-                    <div>
-                        <div class="m-3">
-                            <h4 class="card-title text-center">{{$m->title}}</h4>
-                            <p class="card-subtitle text-center">{{$m->views}} Learners</p>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <a class="btn btn-outline-primary mr-3" href="/detail/{{ $m->id }}">Details</a>
-                        <a class="btn btn-outline-danger mr-3" href="#">Enroll</a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        @endforeach
-        {{-- courses card end --}}
-    </div>
-    <div class="m-5 d-flex justify-content-center">
-        {{-- {{$course->links()}} --}}
-    </div>
+    {{-- @foreach ($course->episodes as $m)
+        <p> {{ $m->episode }} </p>
+    @endforeach --}}
 @endsection
