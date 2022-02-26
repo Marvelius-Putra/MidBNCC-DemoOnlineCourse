@@ -78,9 +78,9 @@
                       <div class="d-flex flex-column justify-content-center">
                         <button type="submit" class="btn btn-outline-primary">Register</button><br>
                         @if($errors->any())
-                        @foreach($errors->all() as $error)
-                        <i  class="text-danger text-center mt-3">{{$error}}</i><br>
-                        @endforeach
+                            @foreach($errors->all() as $error)
+                                <i  class="text-danger text-center mt-3">{{$error}}</i><br>
+                            @endforeach
                         @endif
                     </div>
                       <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="/login" class="fw-bold text-body"><u>Login here</u></a></p>

@@ -16,7 +16,7 @@
     {{-- navbar --}}
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand" href="#">LnT</a>
+          <a class="navbar-brand" href="/home">LnT</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -55,7 +55,7 @@
         </form>
         {{-- searching end --}}
     </div>
-    <div class="row m-2 d-flex justify-content-center">
+    <div class="row m-2 d-flex justify-content-center" style="background-color: #398AB9;">
         {{-- courses card start --}}
 
         @foreach($course as $m)

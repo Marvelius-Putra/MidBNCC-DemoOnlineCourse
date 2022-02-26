@@ -14,6 +14,7 @@
     </style>
 </head>
 <body>
+
     <section class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp'); border: 10px; border-radius: 10px; margin: 100px; justify-content: center; align-content: center; position: flex;">
         <div class="mask d-flex align-items-center h-100 gradient-custom-3">
           <div class="container h-100">
@@ -22,9 +23,6 @@
                 <div class="card" style="border-radius: 15px;">
                   <div class="card-body p-5">
                     <h2 class="text-uppercase text-center mb-5">Login</h2>
-
-                    @auth
-                    {{-- form template start --}}
                     <form method="post" action="/login">
                         @csrf
 
@@ -51,15 +49,14 @@
                         @endif
                     </div>
                     </form>
-                    {{-- form template end --}}
 
-                  </div>
-                </div>
+                {{-- form template ends --}}
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 </body>
-@endif
 </html>

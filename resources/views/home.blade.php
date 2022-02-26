@@ -15,6 +15,9 @@
             text-align: center;
             font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+        section{
+            background-color: #F1D00A;
+        }
     </style>
   </head>
   <body>
@@ -23,7 +26,7 @@
     {{-- navbar --}}
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand" href="#">LnT</a>
+          <a class="navbar-brand" href="/home">LnT</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -54,7 +57,7 @@
     @section('title', 'Popular Courses')
     @section('content')
 
-        <div class="row m-2 d-flex justify-content-center">
+        <div class="row m-2 d-flex justify-content-center" style="background-color: #F1D00A;">
 
             {{-- courses card start --}}
             @foreach($course as $m)
@@ -69,7 +72,7 @@
                         </div>
                         <div class="d-flex justify-content-center">
                             <a class="btn btn-outline-primary mr-3" href="/detail/{{ $m->id }}">Details</a>
-                            <a class="btn btn-outline-danger mr-3" href="/enroll">Enroll</a>
+                            <a class="btn btn-outline-danger mr-3" href="/enroll/{{ $m->id }}">Enroll</a>
 
                         </div>
                     </div>
@@ -78,9 +81,15 @@
             @endforeach
             {{-- courses card end --}}
         </div>
+        <br>
+        <div>
+            <h2 style="text-align: center;"><b>Enroll Course</b></h2>
+        </div>
+
         <div class="m-5 d-flex justify-content-center">
             {{-- {{$course->links()}} --}}
         </div>
+
     @endsection
 
   </body>

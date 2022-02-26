@@ -37,7 +37,7 @@ Route::post('/login',[loginController::class, 'login']);
 
 Route::get('/search', [courseController::class, 'search']);
 
-Route::get('/enroll', [enrollController::class, 'enroll']);
+Route::get('/enroll/{id}', [enrollController::class, 'enroll']);
 
 Route::get('/detail/{id}', [homeController::class, 'showDetail']);
 Route::get('/detail/{id}', [courseController::class, 'showDetail']);
