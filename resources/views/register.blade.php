@@ -10,12 +10,15 @@
         body {
             text-align: center;
             font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100%;
+            margin: 0;
         }
     </style>
 </head>
 <body>
 
-    <section class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp'); border: 10px; border-radius: 10px; margin: 100px; justify-content: center; align-content: center; position: flex;">
+    <section class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp'); height: 100%; background-position: center;
+    background-repeat: no-repeat; background-size: cover; position: relative;">
         <div class="mask d-flex align-items-center h-100 gradient-custom-3">
           <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">

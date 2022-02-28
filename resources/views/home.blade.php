@@ -15,16 +15,13 @@
             text-align: center;
             font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        section{
-            background-color: #F1D00A;
-        }
     </style>
   </head>
   <body>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     {{-- navbar --}}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
         <div class="container">
           <a class="navbar-brand" href="/home">LnT</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,12 +54,12 @@
     @section('title', 'Popular Courses')
     @section('content')
 
-        <div class="row m-2 d-flex justify-content-center" style="background-color: #F1D00A;">
+        <div class="row m-2 d-flex justify-content-center">
 
             {{-- courses card start --}}
             @foreach($course as $m)
             <div class="col col-sm-3">
-                <div class="card bg-light mb-3 border border-warning">
+                <div class="card bg-warning mb-3 border border-warning">
                     <div class="card-body">
                         <div>
                             <div class="m-3">
